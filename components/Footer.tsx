@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
     return(
@@ -51,6 +52,9 @@ export default function Footer() {
                 </div>
             </div>
             <div className="border-t border-green-500 text-center py-4 text-sm text-green-100">
+                <div className="flex items-center justify-center gap-2">
+                    <Image src="/Logo.png" alt="Logo" width={50} height={50} />
+                </div>
                 © {new Date().getFullYear()} R-J Company. Todos los derechos reservados.
             </div>
         </footer>

@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 export default function Navbar(){
     const[open, setOpen] = useState(false)
     return(
@@ -8,7 +9,10 @@ export default function Navbar(){
             <div className="max-w-8xl mx-auto px-10 py-4 flex justify-between items-center">
             
             {/*Logo / Nombre*/}
-            <Link href="/" className="text-xl font-bold">R-J Company</Link>
+            <Link href="/" className="flex items-center gap-2">
+            <Image src="/Logo.png" alt="Logo" width={40} height={40} />
+            <span className="text-xl font-bold text-white" >R-J Company</span>
+            </Link>
 
             {/*Links de Navegacion*/}
             <div className=" flex gap-6 items-center">
