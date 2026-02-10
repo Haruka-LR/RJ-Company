@@ -6,6 +6,12 @@ import type { ReactNode } from "react"
 import "./globals.css"; /*importa los estilos globales para toda la aplicación*/
 import Navbar from "@/components/Navbar"; /*importa el Navbar para su uso en el Layout*/
 import Footer from "@/components/Footer"; /*importa el footer para su uso en el Layout*/
+import type {Metadata} from "next";
+
+export const metadata: Metadata={
+  title: "R-J COMPANY | Desarrollo Web y Aplicaciones ",
+  description: "Desarrollo de paginas Web modernas, aplicaciones y sistemas a medida para negocios y emprendedores.",
+}
 
 export default function RootLayout({
   children,}:{

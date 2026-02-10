@@ -1,3 +1,4 @@
+import FadeIn from "@/components/FadeIn";
 export default function Home(){
   return(
     <main className="min-h-screen bg-white text-black flex items-center ">
@@ -22,8 +23,9 @@ export default function Home(){
 
 
         {/*Cards De Servicios*/}
-        <section className="bg-gray-100 py-20 mt-20">
-          <div className="max-w-6xl mx-auto px-6">
+        
+        <FadeIn >
+          <div className="max-w-6xl mx-auto px-6 mt-20 py-10 bg-gray-50 rounded-xl">
              <h2 className="text-3xl font-bold text-center mb-12">
               Servicios Profesionales de Desarrollo Web a tu Alcance
             </h2>
@@ -62,7 +64,7 @@ export default function Home(){
              
             </div>
           </div>
-        </section>
+        </FadeIn>
       </section>
     </main>
   )

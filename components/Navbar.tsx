@@ -4,7 +4,7 @@ export default function Navbar(){
         <nav className="w-full bg-green-600 text-white ">
             <div className="max-w-8xl mx-auto px-10 py-4 flex justify-between items-center">
             {/*Logo / Nombre*/}
-            <Link href="/" className="text-xl font-bold">R.J Company</Link>
+            <Link href="/" className="text-xl font-bold">R-J Company</Link>
         
             {/*Links de Navegacion*/}
             <div className=" flex gap-6 items-center">
