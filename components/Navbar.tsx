@@ -14,7 +14,10 @@ export default function Navbar(){
                 <Link href="/services" className="hover:text-black">
                  Servicios
                  </Link>
-                <Link href="/contact" className="hover:text-gray-400 bg-black px-4 py-2 rounded-lg text-white font-semibold">
+                  
+                <Link href="/contact" className="hover:text-gray-400 
+                bg-black px-4 py-2 rounded-lg text-white font-semibold
+                "  /* hover */  >
                     Contactame
                 </Link>
             </div>
