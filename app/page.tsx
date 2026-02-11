@@ -1,71 +1,102 @@
 import FadeIn from "@/components/FadeIn";
-export default function Home(){
-  return(
-    <main className="min-h-screen bg-white text-black flex items-center ">
-      <section className="max-w-5xl mx-auto px-6 mt-20">
-        <h1 className="text-5xl font-bold mb-6">
-          Desarrollo Soluciones Digitales Para Tu Negocio
-        </h1>
-        <p className="text-lg text-gray-700 mb-8">
-          Páginas Web, Tiendas en Línea, Aplicaciones Móviles y sistemas modernos
-          pensados para crecer contigo.
-        </p>
-        <div className="flex gap-4">
-          <a href="/contact" className="hover:text-gray-400 bg-black px-6 py-3 
-          rounded-lg text-white font-semibold">
-          Contáctame
-          </a>
-        <a href="/projects" className="border border-gray-400 px-6 py-3 rounded-lg 
-        hover:bg-gray-100 hover:text-slate-900 font-semibold transition-colors ">
-        Ver Proyectos
-        </a>
+
+export default function Home() {
+  return (
+    <main className="relative min-h-screen bg-brand-bg overflow-hidden">
+      {/* CAPA DE IMPACTO VISUAL: Blobs de color difuminados 
+        Esto crea una atmósfera moderna sin saturar la vista.
+      */}
+      <div className="absolute top-[-5%] left-[-10%] w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-[130px] -z-10 animate-pulse" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] bg-brand-accent/10 rounded-full blur-[110px] -z-10" />
+
+      {/* Sección Hero */}
+      <section className="max-w-6xl mx-auto px-6 pt-32 pb-20 md:pt-48 md:pb-32 animate-fadeIn">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-brand-dark tracking-tighter leading-tight">
+            Desarrollo de <span className="text-brand-primary">Soluciones Digitales</span> para tu Negocio
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-2xl leading-relaxed">
+            Creamos páginas web, tiendas en línea y aplicaciones móviles de alto impacto, 
+            diseñadas para transmitir <strong>confianza</strong> y escalar tu éxito.
+          </p>
+
+          <div className="flex flex-wrap gap-5">
+            <a
+              href="/contact"
+              className="group relative bg-brand-accent hover:bg-emerald-600 px-10 py-5 rounded-2xl text-white font-bold text-lg shadow-2xl shadow-emerald-500/30 transition-all hover:-translate-y-1.5 active:scale-95 overflow-hidden"
+            >
+              {/* Efecto de brillo al pasar el mouse en el botón */}
+              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
+              <span className="relative">Contáctame</span>
+            </a>
+            <a
+              href="/projects"
+              className="border-2 border-brand-dark/20 hover:border-brand-dark px-10 py-5 rounded-2xl text-brand-dark font-bold text-lg transition-all hover:bg-brand-dark/5 hover:-translate-y-1.5 active:scale-95"
+            >
+              Ver Proyectos
+            </a>
+          </div>
         </div>
+      </section>
 
-
-        {/*Cards De Servicios*/}
-        
-        <FadeIn >
-          <div className="max-w-6xl mx-auto px-6 mt-20 py-10 bg-gray-50 rounded-xl">
-             <h2 className="text-3xl font-bold text-center mb-12">
-              Servicios Profesionales de Desarrollo Web a tu Alcance
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Servicio 1 */}
-              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <h3 className=" text-xl font-semibold mb-4">
-                 Desarrollo Web Personalizado
-                </h3>
-                <p className="text-gray-600">
-                Páginas web modernas, rápidas y optimizadas para SEO, enfocadas en atraer clientes y generar 
-                una experiencia de usuario excepcional. Desde sitios corporativos hasta tiendas en línea,
-                te ayudo a destacar en el mundo digital.
-                </p>
-               </div>
-               {/* Servicio 2 */}
-              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <h3 className=" text-xl font-semibold mb-4">
-                 Aplicaciones Móviles
-                </h3>
-                <p className="text-gray-600">
-                Desarrollo de aplicaciones móviles nativas y multiplataforma, diseñadas para brindar una experiencia fluida y atractiva.
-                que conectan a tu negocio con tus clientes en cualquier lugar.
-                </p>
+      {/* Cards De Servicios con diseño tipo Panel Profesional */}
+      <FadeIn>
+        <div className="max-w-7xl mx-auto px-6 mb-32">
+          <div className="relative p-1 md:p-1.5 bg-gradient-to-b from-slate-200 to-transparent rounded-[2.5rem]">
+            <div className="bg-white rounded-[2.4rem] px-8 py-20 shadow-2xl shadow-slate-200/60">
+              
+              <div className="text-center mb-20">
+                <span className="text-brand-accent font-bold tracking-widest uppercase text-sm mb-4 block">Experiencia y Calidad</span>
+                <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-6">
+                  Servicios de Desarrollo a tu Alcance
+                </h2>
+                <div className="w-24 h-1.5 bg-brand-accent mx-auto rounded-full"></div>
               </div>
-              {/* Servicio 3 */}
-              <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <h3 className=" text-xl font-semibold mb-4">
-                  Sistemas y Soporte 
-                </h3>
-                <p className="text-gray-600">
-                Sistemas personalizados, mantenimiento y soporte 
-                técnico continuo para garantizar que tu presencia digital funcione sin problemas.
-                </p>
-             </div>
-             
+
+              <div className="grid md:grid-cols-3 gap-10">
+                {/* Servicio 1 - Desarrollo Web */}
+                <div className="group relative p-10 rounded-3xl bg-brand-bg border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-brand-primary/10 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-white shadow-inner rounded-2xl flex items-center justify-center mb-8 text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-brand-dark">Web Personalizada</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Estrategia SEO y diseño centrado en el usuario. Creamos herramientas digitales que impulsan tus ventas.
+                  </p>
+                </div>
+
+                {/* Servicio 2 - Apps */}
+                <div className="group relative p-10 rounded-3xl bg-brand-bg border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-brand-primary/10 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-white shadow-inner rounded-2xl flex items-center justify-center mb-8 text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-brand-dark">Apps Móviles</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Desarrollo fluido para iOS y Android. Llevamos tu negocio directamente al bolsillo de tus clientes.
+                  </p>
+                </div>
+
+                {/* Servicio 3 - Sistemas */}
+                <div className="group relative p-10 rounded-3xl bg-brand-bg border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-brand-primary/10 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-white shadow-inner rounded-2xl flex items-center justify-center mb-8 text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-brand-dark">Soporte y Sistemas</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Arquitectura robusta y soporte técnico proactivo. Garantizamos que tu tecnología nunca se detenga.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </FadeIn>
-      </section>
+        </div>
+      </FadeIn>
     </main>
-  )
+  );
 }

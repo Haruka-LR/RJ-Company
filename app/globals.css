@@ -1,13 +1,43 @@
 @import "tailwindcss";
 
-/* Reset básico recomendado */
-* {
-  box-sizing: border-box;
+/* 1. Definición de la Paleta de Confianza (Tailwind v4) */
+@theme {
+  /* Azules corporativos */
+  --color-brand-dark: #1A2B3C;
+  --color-brand-primary: #2563EB;
+  
+  /* Verde de acción (Confianza/Seguridad) */
+  --color-brand-accent: #10B981;
+  
+  /* Fondos y Neutros */
+  --color-brand-bg: #F8FAFC;
+  --color-slate-800: #1E293B;
+  --color-slate-600: #475569;
 }
 
-html, body {
-  padding: 0;
-  margin: 0;
+/* 2. Variables CSS Estándar (Para asegurar que el texto sea visible) */
+:root {
+  --background: #F8FAFC;
+  --foreground: #1E293B; /* Esto asegura que el texto sea oscuro por defecto */
+}
+
+/* 3. Estilos Globales */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Utilidades Extra para Animaciones Sorprendentes */
+@utility animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes fadeIn {
@@ -22,5 +52,21 @@ html, body {
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* 5. Clases de ayuda por si Tailwind no detecta alguna variable */
+@utility bg-brand-dark {
+  background-color: #1A2B3C;
+}
+@utility text-brand-dark {
+  color: #1A2B3C;
+}
+@utility animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite;
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
