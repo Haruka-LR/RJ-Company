@@ -1,4 +1,5 @@
 import FadeIn from "@/components/FadeIn";
+import TechsTack from "@/components/TechsTack";
 
 export default function Home() {
   return (
@@ -97,6 +98,7 @@ export default function Home() {
           </div>
         </div>
       </FadeIn>
+      <TechsTack /> { /* Sección de Stack Tecnológico con efecto de marquesina */ }
     </main>
   );
 }
