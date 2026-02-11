@@ -1,4 +1,5 @@
 import FadeIn from "@/components/FadeIn";
+import ScrollReveal from "@/components/ScrollReveal";
 import TechsTack from "@/components/TechsTack";
 
 export default function Home() {
@@ -98,7 +99,10 @@ export default function Home() {
           </div>
         </div>
       </FadeIn>
-      <TechsTack /> { /* Sección de Stack Tecnológico con efecto de marquesina */ }
+       { /* Sección de Stack Tecnológico con efecto de marquesina */ }
+      <ScrollReveal direction="up">
+        <TechsTack />
+      </ScrollReveal>
     </main>
   );
 }

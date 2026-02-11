@@ -2,23 +2,18 @@
 
 /* 1. Definición de la Paleta de Confianza (Tailwind v4) */
 @theme {
-  /* Azules corporativos */
   --color-brand-dark: #1A2B3C;
   --color-brand-primary: #2563EB;
-  
-  /* Verde de acción (Confianza/Seguridad) */
   --color-brand-accent: #10B981;
-  
-  /* Fondos y Neutros */
   --color-brand-bg: #F8FAFC;
   --color-slate-800: #1E293B;
   --color-slate-600: #475569;
 }
 
-/* 2. Variables CSS Estándar (Para asegurar que el texto sea visible) */
+/* 2. Variables CSS Estándar */
 :root {
   --background: #F8FAFC;
-  --foreground: #1E293B; /* Esto asegura que el texto sea oscuro por defecto */
+  --foreground: #1E293B;
 }
 
 /* 3. Estilos Globales */
@@ -29,44 +24,49 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 4. Utilidades Extra para Animaciones Sorprendentes */
+/* 4. Utilidades Extra y Animaciones */
 @utility animate-shimmer {
   animation: shimmer 2s infinite;
 }
 
 @keyframes shimmer {
-  100% {
-    transform: translateX(100%);
-  }
+  100% { transform: translateX(100%); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fadeIn {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* 5. Clases de ayuda por si Tailwind no detecta alguna variable */
+/* --- AQUÍ VAN LAS CLASES DE SCROLL REVEAL --- */
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+  visibility: visible !important; /* Añadimos esto por si acaso */
+}
+/* 5. Clases de ayuda y Animación de TechStack */
 @utility bg-brand-dark {
   background-color: #1A2B3C;
 }
 @utility text-brand-dark {
   color: #1A2B3C;
 }
-@utility animate-infinite-scroll {
-  animation: infinite-scroll 25s linear infinite;
+@keyframes infinite-scroll {
+  from { 
+    transform: translateX(0); 
+  }
+  to { 
+    /* Si triplicaste la lista, el final exacto es -33.33% */
+    /* Si solo la duplicaste, el final exacto es -50% */
+    transform: translateX(-33.33%); 
+  }
 }
 
-@keyframes infinite-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+@utility animate-infinite-scroll {
+  /* "linear" es vital para que el ritmo no cambie (que no acelere ni frene) */
+  animation: infinite-scroll 40s linear infinite; 
 }

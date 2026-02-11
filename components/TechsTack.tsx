@@ -17,7 +17,7 @@ const technologies =[
 
 export default function TechsTack() {
     //duplicamos la lista para crear un efecto de scroll infinito
-    const doubleTechs = [...technologies,...technologies];
+    const tripleTechs = [...technologies,...technologies,...technologies];
     return(
         <section className="py-20 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
@@ -31,18 +31,18 @@ export default function TechsTack() {
 
             {/* Contenedor de la marquesina */}
 
-            <div className="relative flex overflow-hidden group">
-                <div className="flex animate-infinite-scroll gap-16 py-8">
-                    {doubleTechs.map((tech, index) =>(
+            <div className="relative flex overflow-hidden">
+                <div className="flex animate-infinite-scroll gap-16 py-8 w-max">
+                    {tripleTechs.map((tech, index) =>(
                     <div key={index}
-                    className="flex items-center gap-4 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-default"
+                    className="flex items-center gap-4 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500 "
                     >
                         <img 
                         src={tech.logo}
                         alt={tech.name}
                         className="h-10 md:h-12 w-auto object-contain"
                         />
-                        <span className="text-xl font-bold text-slate-400 group-hover:text-brand-dark transition-colors">
+                        <span className="text-xl font-bold text-slate-400 ">
                             {tech.name}
                         </span>
                     </div>
