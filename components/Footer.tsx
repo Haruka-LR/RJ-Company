@@ -23,13 +23,11 @@ export default function Footer(){
                     <div>
                     <h4 className="text-lg font-bold mb-6 border-l-4 border-brand-accent pl-3">Navegacion</h4>
                     <ul className="space-y-4">
-                        {["Inicio", "Sobre Mí", "Proyectos", "Contacto"].map((item)=>(
-                            <li key={item}>
-                                <Link href="#" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">
-                                {item}
-                                </Link>
-                            </li>))}
-                        </ul>
+                        <li><Link href="/" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Inicio</Link></li>
+                        <li><Link href="/about" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Sobre Mí</Link></li>
+                        <li><Link href="/projects" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Proyectos</Link></li> {/* <--- Cambia el "#" por "/projects" */}
+                        <li><Link href="/contact" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Contacto</Link></li>
+                    </ul>
                     </div>
                     { /* Columna 3: Servicios */ }
                     <div>

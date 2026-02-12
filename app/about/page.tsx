@@ -43,12 +43,12 @@ export default function About() {
                 Impulsando negocios con <span className="text-brand-accent">código moderno.</span>
               </h1>
               <p className=" text-lg text-slate-600 mb-6 leading-relaxed">
-                !Hola¡ Soy<span className="font-bold text-brand-dark">Dayron Oswaldo Romero Jimenéz.</span>
+                !Hola¡ Soy <span className="font-bold text-brand-dark"> Dayron Oswaldo Romero Jimenéz </span>
                 T.S.U en Desarollo de Software especializado en crear soluciones que no solo funcionen,
-                sino que sean <strong>escalables y visualmente impactantes.</strong>
+                sino que sean <strong> escalables y visualmente impactantes.</strong>
               </p>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                Mi enfoque va más alla de escribir lineas de código; me apasiona entender la <strong>lógica del negocio</strong>
+                Mi enfoque va más alla de escribir lineas de código; me apasiona entender la <strong> lógica del negocio </strong>
                 para optimizar procesos y generar valor real a través de tecnologias como Next.js, Flutter y ecosistemas
                 de bases de datos modernos.
               </p>

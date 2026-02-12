@@ -1,7 +1,7 @@
 import FadeIn from "@/components/FadeIn";
 import ScrollReveal from "@/components/ScrollReveal";
 import TechsTack from "@/components/TechsTack";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-brand-bg overflow-hidden">
@@ -31,12 +31,12 @@ export default function Home() {
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
               <span className="relative">Contáctame</span>
             </a>
-            <a
+            <Link
               href="/projects"
               className="border-2 border-brand-dark/20 hover:border-brand-dark px-10 py-5 rounded-2xl text-brand-dark font-bold text-lg transition-all hover:bg-brand-dark/5 hover:-translate-y-1.5 active:scale-95"
             >
               Ver Proyectos
-            </a>
+            </Link>
           </div>
         </div>
       </section>
