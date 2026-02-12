@@ -11,9 +11,9 @@ export default function About() {
     <main className="min-h-screen bg-brand-bg py-24">
       <div className="max-w-6xl mx-auto px-6">
         { /* SECCIÓN 1: PERFIL PRINCIPAL   */}
-        <div className="grid md:grid-cols-12 gap-12 items-center mb-24">
+        <div className="grid grid-cols-12 gap-y-12 md:gap-12 items-center">
           { /* FOTO CON DISEÑO ASIMETRICO */}
-          <div className="md:col-span-5 flex justify-center relative">
+          <div className="col-span-12 md:col-span-5 flex justify-center relative">
             <ScrollReveal direction="left">
               <div className="relative w-64 h-80 md:w-80 md:h-96">
 
@@ -34,7 +34,7 @@ export default function About() {
             </ScrollReveal>
           </div>
           {/* TEXTO DE PRESENTACION */}
-          <div className="md:col-span-7">
+          <div className="col-span-12 md:col-span-7">
             <ScrollReveal direction="right">
               <span className="text-brand-accent font-bold tracking-widest uppercase text-sm mb-4 block">
                 Desarrollador Full Stack Jr.
