@@ -21,7 +21,7 @@ import { MessageCircle } from "lucide-react"; // Es el icono que representa chat
 </a>;
 
 export const metadata = {
-    title: "Contacto | R-J Company",
+    title: "Contacto | RJ Development",
     description:
         "Ponte en contacto con Dayron Oswaldo para iniciar tu próximo proyecto digital.",
 };

@@ -1,7 +1,7 @@
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
-  title: "Servicios | R-J Company",
+  title: "Servicios De Software | R-J Development",
   description: "Soluciones tecnológicas a medida: Desarrollo Web, Apps Móviles y Sistemas Empresariales.",
 };
 

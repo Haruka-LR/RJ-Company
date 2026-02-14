@@ -3,7 +3,7 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
-  title: "Sobre Mí | R-J Company",
+  title: "Sobre Mí | R-J Development",
   description: "Conoce a Dayron Oswaldo, Desarrollador Full Stack, especializado en soluciones escalables y eficientes para impulsar tu negocio."
 };
 export default function About() {
