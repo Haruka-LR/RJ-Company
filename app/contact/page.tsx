@@ -75,7 +75,7 @@ export default function ContactPage() {
                                             Email
                                         </p>
                                         <p className="text-brand-dark font-bold group-hover:text-[#EA4335] transition-colors">
-                                            rj-company2004@gmail.com
+                                            rjdevelopment2004@gmail.com
                                         </p>
                                     </div>
                                 </div>
@@ -159,13 +159,18 @@ export default function ContactPage() {
                     {/* COLUMNA 2: FORMULARIO GLASSMORPHISM */}
                     <ScrollReveal direction="right">
                         <div className="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white shadow-2xl shadow-slate-200/50">
-                            <form className="space-y-6">
-                                <div className="grid grid-cols-2 gap-4">
+                            <form
+                            action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_KEY}`}
+                            method="POST" 
+                            className="space-y-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold text-slate-700 ml-1">
                                             Nombre
                                         </label>
                                         <input
+                                            name="name" // IMPORTANTE: Formspree usa este nombre para el correo
+                                            required //SE AÑADIO REQUIRED
                                             type="text"
                                             placeholder="Tu nombre"
                                             className="w-full px-5 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
@@ -176,6 +181,8 @@ export default function ContactPage() {
                                             Email
                                         </label>
                                         <input
+                                            name="email" //IMPORTANTE 
+                                            required
                                             type="email"
                                             placeholder="tu@correo.com"
                                             className="w-full px-5 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
@@ -188,6 +195,8 @@ export default function ContactPage() {
                                         Asunto
                                     </label>
                                     <input
+                                        name="asunto" //IMPORTANTE
+                                        required // SE AÑADIO REQUIRED  
                                         type="text"
                                         placeholder="¿En qué puedo ayudarte?"
                                         className="w-full px-5 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
@@ -199,6 +208,8 @@ export default function ContactPage() {
                                         Mensaje
                                     </label>
                                     <textarea
+                                        name="message" //IMPORTANTE
+                                        required
                                         rows={4}
                                         placeholder="Cuéntame sobre tu proyecto..."
                                         className="w-full px-5 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all resize-none"
