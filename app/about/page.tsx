@@ -44,12 +44,12 @@ export default function About() {
               </h1>
               <p className=" text-lg text-slate-600 mb-6 leading-relaxed">
                 !Hola¡ Soy <span className="font-bold text-brand-dark"> Dayron Oswaldo Romero Jimenéz </span>
-                T.S.U en Desarollo de Software especializado en crear soluciones que no solo funcionen,
-                sino que sean <strong> escalables y visualmente impactantes.</strong>
+                Desarrollador de Software especializado en crear soluciones digitales, optimizando procesos escalables dentro de tu negocio, con un diseño de acuerdo a tus
+                 <strong> necesidades </strong>
               </p>
               <p className="text-slate-600 mb-8 leading-relaxed">
                 Mi enfoque va más alla de escribir lineas de código; me apasiona entender la <strong> lógica del negocio </strong>
-                para optimizar procesos y generar valor real a través de tecnologias como Next.js, Flutter y ecosistemas
+                para optimizar procesos y generar valor real a través de tecnologias y ecosistemas
                 de bases de datos modernos.
               </p>
 
@@ -65,8 +65,8 @@ export default function About() {
                   <p className="text-sm text-slate-500">Proyectos Listos</p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-black text-brand-dark">TSU</h3>
-                  <p className="text-sm text-slate-500">En Ing. de Software</p>
+                  <h3 className="text-2xl font-black text-brand-dark">Desarrollador</h3>
+                  <p className="text-sm text-slate-500">de Software Multiplatadorma</p>
                 </div>
               </div>
 

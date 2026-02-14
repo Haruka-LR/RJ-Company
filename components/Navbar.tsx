@@ -31,7 +31,7 @@ export default function Navbar() {
             className={`text-2xl font-black tracking-tighter transition-colors duration-500 ${scrolled ? "text-white" : "text-brand-dark"
               }`}
           >
-            R-J <span className="text-brand-accent">Company</span>
+            R - J<span className="text-brand-accent"> | Development</span>
           </span>
         </Link>
 

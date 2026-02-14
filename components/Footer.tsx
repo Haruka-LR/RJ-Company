@@ -11,7 +11,7 @@ export default function Footer(){
                     <div className="col-span-1 md:col-span-1">
                         <Link href="/" className="flex items-center gap-3 mb-6">
                         <span className="text-2xl font-black tracking-tighter">
-                            R-J <span className=" text-brand-accent">Company</span>
+                           R-J<span className=" text-brand-accent"> | Development </span>
                         </span>
                         </Link>
                         <p className="text-gray-400 leading-relaxed">
@@ -25,7 +25,7 @@ export default function Footer(){
                     <ul className="space-y-4">
                         <li><Link href="/" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Inicio</Link></li>
                         <li><Link href="/about" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Sobre Mí</Link></li>
-                        <li><Link href="/projects" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Proyectos</Link></li> {/* <--- Cambia el "#" por "/projects" */}
+                       {/*  <li><Link href="/projects" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Proyectos</Link></li> {/* <--- Cambia el "#" por "/projects" */}
                         <li><Link href="/contact" className="text-gray-400 hover:text-brand-accent transition-colors duration-300">Contacto</Link></li>
                     </ul>
                     </div>
@@ -48,7 +48,7 @@ export default function Footer(){
                 </div>
                 {/* Línea Divisora y Copyright */ }
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                <p> © {new Date().getFullYear()} R-J Company. Todos los derechos reservados. </p>
+                <p> © {new Date().getFullYear()} R - J | Development Todos los derechos reservados. </p>
                 <div className="flex gap-6">
                 <Link href="#" className="hover:text-white transition-colors">Términos</Link>
                 <Link href="#" className="hover:text-white transition-colors">Privacidad</Link>
