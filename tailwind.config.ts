@@ -18,6 +18,11 @@ export default {
           600: "#475569", 
         }
       },
+      /* Espacios personalizados para los blobs decorativos de fondo */
+      spacing: {
+        '150': '37.5rem', /* 600px - para w-150 y h-150 */
+        '125': '31.25rem', /* 500px - para w-125 y h-125 */
+      },
     },
   },
   plugins: [],
