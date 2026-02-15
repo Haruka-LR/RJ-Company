@@ -6,7 +6,6 @@ import Link from "next/link";
 export const metadata = {
   title: 'RJ Development | Soluciones Digitales para tu Negocio',
   description: 'Creamos páginas web y aplicaciones móviles de alto impacto. Expertos en desarrollo digital para escalar tu éxito.',
-  keywords: ['RJ Development', 'Desarrollo Web', 'R.J Company', 'Páginas Web México', 'R-J Development', 'Desarrollador Web', 'Desarrollador FullStack', 'Desarrollador Full Stack Jr', 'Desarrollador Jr'] ,
 }
 
 export default function Home() {

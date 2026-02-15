@@ -7,6 +7,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "R-J COMPANY | Desarrollo Web y Aplicaciones",
   description: "Ayudo a negocios y emprendedores a crecer mediante el desarrollo de páginas web, tiendas online y aplicaciones móviles.",
+  keywords: [
+    'RJ Development', 'rj development', 'R-J Development','r-j development','development','rj', // Tu marca
+    'Desarrollo Web', 'Páginas Web México', 'Diseño de Tiendas Online','Creacion de bases de datos','Gestion de informacion', // Servicios
+    'Desarrollador Full Stack', 'Software a medida', 'Sistemas de Gestión', // Experiencia
+    'Creación de Aplicaciones Móviles', 'Desarrollador Web Profesional' // Valor
+  ],
   verification: {
     google: "DAZQXNSL3041shug2bVX57OBah_V3qBqmbie1gkNkyo"
   },
