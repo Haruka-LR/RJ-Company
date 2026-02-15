@@ -63,7 +63,7 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <ScrollReveal key={index} direction="up">
-              <div className="group bg-white p-8 md:p-10 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-2xl hover:border-brand-accent/20 transition-all duration-500 h-full relative overflow-hidden flex flex-col">
+              <div className="group bg-white p-8 md:p-10 rounded-4xl border border-slate-100 shadow-sm hover:shadow-2xl hover:border-brand-accent/20 transition-all duration-500 h-full relative overflow-hidden flex flex-col">
                 
                 {/* Decoración de fondo */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
@@ -72,7 +72,7 @@ export default function ServicesPage() {
                   {service.title}
                 </h3>
                 
-                <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-8 flex-grow">
+                <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-8 grow">
                   {service.description}
                 </p>
 
