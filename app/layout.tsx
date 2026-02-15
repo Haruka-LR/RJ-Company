@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "R-J COMPANY | Desarrollo Web y Aplicaciones",
+  title: "RJ Development | Desarrollo Web y Aplicaciones",
   description: "Ayudo a negocios y emprendedores a crecer mediante el desarrollo de páginas web, tiendas online y aplicaciones móviles.",
   keywords: [
     'RJ Development', 'rj development', 'R-J Development','r-j development','development','rj', // Tu marca
@@ -18,10 +18,10 @@ export const metadata: Metadata = {
   },
   // Esto hará que el link se vea increíble en WhatsApp/Social Media
   openGraph: {
-    title: "R-J COMPANY | Soluciones Digitales",
+    title: "RJ Development | Soluciones Digitales",
     description: "Desarrollo a medida para escalar tu éxito.",
     url: "https://rjdevelopment.vercel.app",
-    siteName: "R-J COMPANY",
+    siteName: "RJ Development",
     locale: "es_MX",
     type: "website",
   },
