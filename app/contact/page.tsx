@@ -86,7 +86,7 @@ export default function ContactPage() {
 
                   {/* WHATSAPP */}
                   <a
-                    href="https://wa.me/+525624564960?text=Hola%20Dayron,%20vengo%20de%20tu%20portafolio"
+                    href="https://wa.me/+525624564960?text=Hola%20Dayron,%20Mucho%20gusto,%20vengo%20de%20tu%20sitio%20web,%20me%20gustaría%20hablar%20contigo%20sobre%20un%20proyecto."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 md:p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-green-200 transition-all group"
