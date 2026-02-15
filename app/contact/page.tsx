@@ -7,11 +7,12 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-brand-bg py-24 md:py-32">
+    /* CORRECCIÓN: overflow-x-hidden para matar el cuadro blanco lateral */
+    <main className="min-h-screen bg-brand-bg py-20 md:py-32 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         {/* ENCABEZADO */}
-        <div className="text-center mb-16 md:mb-24">
+        <div className="text-center mb-12 md:mb-24">
           <ScrollReveal direction="up">
             <h1 className="text-4xl md:text-6xl font-black text-brand-dark mb-6 leading-tight">
               Hablemos de tu <span className="text-brand-accent">Próximo Paso.</span>
@@ -24,9 +25,10 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* COLUMNA 1: INFORMACIÓN DE CONTACTO (Ocupa 5 de 12 columnas) */}
+          {/* COLUMNA 1: INFORMACIÓN DE CONTACTO */}
           <div className="lg:col-span-5">
-            <ScrollReveal direction="left">
+            {/* CORRECCIÓN: En móvil usamos "up" en lugar de "left" para evitar el desbordamiento lateral */}
+            <ScrollReveal direction="up">
               <div className="space-y-8">
                 <div>
                   <h2 className="text-3xl font-bold text-brand-dark mb-4">
@@ -37,11 +39,9 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Contenedor de Tarjetas */}
                 <div className="flex flex-col gap-4"> 
-                  
                   {/* EMAIL */}
-                  <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group">
+                  <div className="flex items-center gap-4 p-4 md:p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group">
                     <div className="shrink-0 w-12 h-12 bg-[#EA4335] rounded-xl flex items-center justify-center p-2.5 shadow-lg shadow-red-100 group-hover:scale-110 transition-transform">
                       <svg viewBox="0 0 24 24" className="w-full h-full fill-white" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.39l-9 6.58-9-6.58V21H1.5C.65 21 0 20.35 0 19.5v-15c0-1.17 1.26-1.88 2.22-1.2 l9.78 7.15 9.78-7.15c.96-.68 2.22.03 2.22 1.2z" />
@@ -49,12 +49,12 @@ export default function ContactPage() {
                     </div>
                     <div className="grow min-w-0">
                       <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-1">Email</p>
-                      <p className="text-brand-dark font-bold truncate">rjdevelopment2004@gmail.com</p>
+                      <p className="text-brand-dark font-bold truncate text-sm md:text-base">rjdevelopment2004@gmail.com</p>
                     </div>
                   </div>
 
                   {/* UBICACIÓN */}
-                  <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group">
+                  <div className="flex items-center gap-4 p-4 md:p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group">
                     <div className="shrink-0 w-12 h-12 bg-[#4285F4] rounded-xl flex items-center justify-center p-2.5 shadow-lg shadow-blue-100 group-hover:scale-110 transition-transform">
                       <svg viewBox="0 0 24 24" className="w-full h-full fill-white" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
@@ -62,7 +62,7 @@ export default function ContactPage() {
                     </div>
                     <div className="grow min-w-0">
                       <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-1">Ubicación</p>
-                      <p className="text-brand-dark font-bold truncate">Tizayuca, Hidalgo, México</p>
+                      <p className="text-brand-dark font-bold truncate text-sm md:text-base">Tizayuca, Hidalgo, México</p>
                     </div>
                   </div>
 
@@ -71,7 +71,7 @@ export default function ContactPage() {
                     href="#" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group"
+                    className="flex items-center gap-4 p-4 md:p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all group"
                   >
                     <div className="shrink-0 w-12 h-12 bg-[#0A66C2] rounded-xl flex items-center justify-center p-2.5 shadow-lg shadow-blue-100 group-hover:scale-110 transition-transform">
                       <svg viewBox="0 0 24 24" className="w-full h-full fill-white" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ export default function ContactPage() {
                     </div>
                     <div className="grow min-w-0">
                       <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-1">LinkedIn</p>
-                      <p className="text-brand-dark font-bold truncate">Conectar profesionalmente</p>
+                      <p className="text-brand-dark font-bold truncate text-sm md:text-base">Conectar profesionalmente</p>
                     </div>
                   </a>
 
@@ -89,7 +89,7 @@ export default function ContactPage() {
                     href="https://wa.me/+525624564960?text=Hola%20Dayron,%20vengo%20de%20tu%20portafolio"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-green-200 transition-all group"
+                    className="flex items-center gap-4 p-4 md:p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-green-200 transition-all group"
                   >
                     <div className="shrink-0 w-12 h-12 bg-[#25D366] rounded-xl flex items-center justify-center p-2.5 shadow-lg shadow-green-200 group-hover:scale-110 transition-transform">
                       <svg viewBox="0 0 24 24" className="w-full h-full fill-white" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +98,7 @@ export default function ContactPage() {
                     </div>
                     <div className="grow">
                       <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-1">WhatsApp Directo</p>
-                      <p className="font-bold text-brand-dark group-hover:text-[#25D366] transition-colors">Enviar mensaje ahora</p>
+                      <p className="font-bold text-brand-dark group-hover:text-[#25D366] transition-colors text-sm md:text-base">Enviar mensaje ahora</p>
                     </div>
                   </a>
 
@@ -107,16 +107,17 @@ export default function ContactPage() {
             </ScrollReveal>
           </div>
 
-          {/* COLUMNA 2: FORMULARIO (Ocupa 7 de 12 columnas) */}
+          {/* COLUMNA 2: FORMULARIO */}
           <div className="lg:col-span-7">
-            <ScrollReveal direction="right">
-              <div className="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white shadow-2xl shadow-slate-200/50">
+            {/* CORRECCIÓN: Usamos direction="up" para mayor estabilidad en móvil */}
+            <ScrollReveal direction="up">
+              <div className="bg-white/80 backdrop-blur-md p-6 md:p-10 rounded-3xl border border-white shadow-2xl shadow-slate-200/50">
                 <form
                   action={`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_KEY}`}
                   method="POST"
-                  className="space-y-6"
+                  className="space-y-5 md:y-6"
                 >
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-slate-700 ml-1">Nombre</label>
                       <input
@@ -124,7 +125,7 @@ export default function ContactPage() {
                         required
                         type="text"
                         placeholder="Tu nombre"
-                        className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
+                        className="w-full px-5 py-3.5 md:py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
                       />
                     </div>
                     <div className="space-y-2">
@@ -134,7 +135,7 @@ export default function ContactPage() {
                         required
                         type="email"
                         placeholder="tu@correo.com"
-                        className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
+                        className="w-full px-5 py-3.5 md:py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
                       />
                     </div>
                   </div>
@@ -146,7 +147,7 @@ export default function ContactPage() {
                       required
                       type="text"
                       placeholder="¿En qué puedo ayudarte?"
-                      className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
+                      className="w-full px-5 py-3.5 md:py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all"
                     />
                   </div>
 
@@ -155,15 +156,15 @@ export default function ContactPage() {
                     <textarea
                       name="message"
                       required
-                      rows={5}
+                      rows={4}
                       placeholder="Cuéntame sobre tu proyecto..."
-                      className="w-full px-5 py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all resize-none"
+                      className="w-full px-5 py-3.5 md:py-4 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 outline-none transition-all resize-none"
                     ></textarea>
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full py-4 bg-brand-dark text-white font-black rounded-2xl hover:bg-brand-accent transition-all duration-300 shadow-lg shadow-brand-dark/20 hover:shadow-brand-accent/30 flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-brand-dark text-white font-black rounded-2xl hover:bg-brand-accent transition-all duration-300 shadow-lg shadow-brand-dark/20 hover:shadow-brand-accent/30 flex items-center justify-center gap-2 mt-2"
                   >
                     Enviar Mensaje
                   </button>

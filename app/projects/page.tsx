@@ -1,97 +1,111 @@
+import FadeIn from "@/components/FadeIn";
 import ScrollReveal from "@/components/ScrollReveal";
-import ProjectCard from "@/components/ProjectCard";
+import TechsTack from "@/components/TechsTack";
+import Link from "next/link";
 
 export const metadata = {
-    title: "Proyectos | R-J Company",
-    description: "Portafolio de soluciones digitales desarrolladas por Dayron Oswaldo."
-};
-const projects = [
-  {
-    title: "E-Commerce de Alto Impacto",
-    description: "Plataforma de ventas completa con carrito de compras, gestión de inventario y pagos seguros. Enfocada en la conversión del usuario.",
-    tech: ["Next.js", "Tailwind CSS", "Firebase"],
-    link: "#",
-    github: "#",
-    image: "/p1.jpg", // Asegúrate de tener estas imágenes en public/
-  },
-  {
-    title: "Sistemas ERP Internos",
-    description: "Dashboard administrativo para la optimización de procesos operativos, control de empleados y reportes financieros en tiempo real.",
-    tech: ["React", "Node.js", "PostgreSQL"],
-    link: "#",
-    github: "#",
-    image: "/p2.jpg",
-  },
-  {
-    title: "App Móvil de Delivery",
-    description: "Aplicación multiplataforma para rastreo de pedidos y gestión de rutas de entrega en tiempo real utilizando geolocalización.",
-    tech: ["Flutter", "Python", "Google Maps"],
-    link: "#",
-    github: "#",
-    image: "/p3.jpg",
-  },
-  {
-    title: "Portal de Análisis de Datos",
-    description: "Herramienta visual para transformar datos crudos en gráficos interactivos que facilitan la toma de decisiones estratégicas.",
-    tech: ["Python", "Flask", "Chart.js"],
-    link: "#",
-    github: "#",
-    image: "/p4.jpg",
-  },
-  // Puedes añadir más proyectos siguiendo esta misma estructura
-];
+  title: 'RJ Development | Soluciones Digitales para tu Negocio',
+  description: 'Creamos páginas web y aplicaciones móviles de alto impacto. Expertos en desarrollo digital para escalar tu éxito.',
+  keywords: ['RJ Development', 'Desarrollo Web', 'R.J Company', 'Páginas Web México', 'R-J Development', 'Desarrollador Web', 'Desarrollador FullStack', 'Desarrollador Full Stack Jr', 'Desarrollador Jr'] ,
+}
 
-export default function ProjectsPage(){
-    return(
-        <main className="min-h-screen bg-brand-bg py-24">
-            <div className="max-w-7xl mx-auto px-6">
-                
-                {/* ENCABEZADO DE LA SECCIÓN */}
+export default function Home() {
+  return (
+    <main className="relative min-h-screen bg-brand-bg overflow-x-hidden">
+      {/* CORRECCIÓN: Envolvemos los blobs en un div con overflow-hidden y -z-10.
+         Esto evita que el "blur" se salga de la pantalla y cree el cuadro blanco.
+      */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+        <div className="absolute top-[-2%] left-[-5%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brand-primary/10 rounded-full blur-[80px] md:blur-[130px] animate-pulse" />
+        <div className="absolute bottom-[20%] right-[-5%] w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-brand-accent/10 rounded-full blur-[70px] md:blur-[110px]" />
+      </div>
 
-                <div className="text-center mb-20">
-                    <ScrollReveal direction="up">
-                        <span className="text-brand-accent font-bold trackin-widest uppercase text-sm mb-4 block">
-                          Evidencia de Resultados  
-                        </span>
-                        <h1 className="text-4xl md:text-6xl font-black text-brand-dark mb-6">
-                            Portafolio de <span className="text-brand-accent"> Proyectos. </span>
-                        </h1>
-                        <p className="text-slate-500 max-w-2xl mx-auto text-xl">
-                            Una selección de soluciones digitales diseñadas para resolver problemas complejos y escalar negocios
-                        </p>
-                    </ScrollReveal>
+      {/* Sección Hero */}
+      <section className="max-w-6xl mx-auto px-6 pt-32 pb-20 md:pt-48 md:pb-32">
+        <div className="max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-brand-dark tracking-tighter leading-tight">
+            Desarrollo de <span className="text-brand-primary">Soluciones Digitales</span> para tu Negocio
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-2xl leading-relaxed">
+            Creamos páginas web, tiendas en línea y aplicaciones móviles de alto impacto,
+            diseñadas para transmitir <strong>confianza</strong> y escalar tu éxito.
+          </p>
+
+          <div className="flex flex-wrap gap-5">
+            <Link
+              href="/contact"
+              className="group relative bg-brand-accent hover:bg-emerald-600 px-10 py-5 rounded-2xl text-white font-bold text-lg shadow-2xl shadow-emerald-500/30 transition-all hover:-translate-y-1.5 active:scale-95 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
+              <span className="relative">Contáctame</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Cards De Servicios */}
+      <FadeIn>
+        <div className="max-w-7xl mx-auto px-6 mb-32">
+          {/* Ajuste de padding en móvil para evitar que la tarjeta se vea comprimida */}
+          <div className="relative p-0.5 md:p-1.5 bg-gradient-to-b from-slate-200 to-transparent rounded-[2.5rem]">
+            <div className="bg-white rounded-[2.4rem] px-6 py-16 md:px-8 md:py-20 shadow-2xl shadow-slate-200/60">
+
+              <div className="text-center mb-20">
+                <span className="text-brand-accent font-bold tracking-widest uppercase text-sm mb-4 block">Experiencia y Calidad</span>
+                <h2 className="text-3xl md:text-5xl font-bold text-brand-dark mb-6">
+                  Servicios de Desarrollo a tu Alcance
+                </h2>
+                <div className="w-24 h-1.5 bg-brand-accent mx-auto rounded-full"></div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                {/* Servicio 1 */}
+                <div className="group relative p-10 rounded-3xl bg-brand-bg border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-brand-primary/10 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-white shadow-inner rounded-2xl flex items-center justify-center mb-8 text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-brand-dark">Web Personalizada</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Estrategia SEO y diseño centrado en el usuario. Creamos herramientas digitales que impulsan tus ventas.
+                  </p>
                 </div>
 
-                {/* GRID DE PROYECTOS */}
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index)=>(
-                        <ScrollReveal key={index} direction="up">
-                            <ProjectCard project={project}/>
-                        </ScrollReveal>
-                    ))}
+                {/* Servicio 2 */}
+                <div className="group relative p-10 rounded-3xl bg-brand-bg border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-brand-primary/10 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-white shadow-inner rounded-2xl flex items-center justify-center mb-8 text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-brand-dark">Apps Móviles</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Desarrollo fluido para iOS y Android. Llevamos tu negocio directamente al bolsillo de tus clientes.
+                  </p>
                 </div>
 
-                { /*LLAMADO A LA ACCION FINAL */ }
-                <div className="mt-24 text-center">
-                    <ScrollReveal direction="up">
-                        <div className="bg-brand-dark rounded-3xl p-12 relative overflow-hidden">
-                            { /* Circulos decorativos de fondo */ }
-                            <div className=" absolute top-0 right-0 w-64 h-64 bg-brand-accent/10 rounded-full -mr-32 -mt-32"></div>
-                            <div className=" absolute bottom-0 left-0 w-64 h-64 bg-brand-primary/10 rounded-full -ml-32 -mb-32"></div>
-                            <h2 className="text-3xl font-bold text-white mb-6 relative z-10">
-                                ¿Tienes una idea que quieras materializar?
-                            </h2>
-                            <p className="text-slate-400 mb-8 max-w-lg mx-auto relative z-10">
-                                Estoy disponible para colaborar en proyectos desafiantes y construir la proxima gran solución juntos.
-                            </p>
-                            <a href="/contact" className="inline-block bg-brand-accent text-white px-10 py-4 rounded-2xl font-black hover:bg-emerald-600 transition-all relative z-10">
-                            Hablemos de tu proyecto
-                            </a>
-                        </div>
-                    </ScrollReveal>
+                {/* Servicio 3 */}
+                <div className="group relative p-10 rounded-3xl bg-brand-bg border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-brand-primary/10 hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-white shadow-inner rounded-2xl flex items-center justify-center mb-8 text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-brand-dark">Soporte y Sistemas</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Arquitectura robusta y soporte técnico proactivo. Garantizamos que tu tecnología nunca se detenga.
+                  </p>
                 </div>
+              </div>
             </div>
-        </main>
-    );
+          </div>
+        </div>
+      </FadeIn>
+
+      <ScrollReveal direction="up">
+        <TechsTack />
+      </ScrollReveal>
+    </main>
+  );
 }

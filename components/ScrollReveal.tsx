@@ -1,40 +1,50 @@
 "use client";
-import { useEffect, useRef, ReactNode } from "react";
+import { useEffect, useRef, ReactNode, useState } from "react";
 
 interface Props {
     children: ReactNode;
     direction?: "up" | "down" | "left" | "right";
 }
-// Componente para revelar elementos al hacer scroll con animación
+
 export default function ScrollReveal({ children, direction = "up" }: Props) {
     const elementRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    console.log("¿Es visible?", entry.isIntersecting); // Agrega esto para ver en la consola (F12) si funciona
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("reveal-visible");
-                    }
-                });
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    // Una vez visible, dejamos de observar para ahorrar memoria en móvil
+                    if (elementRef.current) observer.unobserve(elementRef.current);
+                }
             },
-            { threshold: 0.05 } // Se activa antes
+            { 
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px" // Se activa un poco antes de entrar
+            }
         );
+
         if (elementRef.current) observer.observe(elementRef.current);
         return () => observer.disconnect();
     }, []);
 
-    // Definimos de dónde viene el movimiento
     const directions = {
-        up: "translate-y-12",
-        down: "translate-y-12",
-        left: "translate-x-12",
-        right: "translate-x-12",
+        up: "translate-y-10",
+        down: "-translate-y-10",
+        left: "translate-x-10",
+        right: "-translate-x-10",
     };
 
     return (
-        <div ref={elementRef} className={`opacity-0 transition-all duration-1000 ease-out ${directions[direction]} reveal-hidden`}>
+        <div
+            ref={elementRef}
+            className={`transition-all duration-700 ease-out ${
+                isVisible 
+                ? "opacity-100 translate-x-0 translate-y-0" 
+                : `opacity-0 ${directions[direction]}`
+            }`}
+        >
             {children}
         </div>
     );
