@@ -25,8 +25,11 @@ export default function Home() {
             Desarrollo de <span className="text-brand-primary">Soluciones Digitales</span> para tu Negocio
           </h1>
           <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-2xl leading-relaxed">
-            Creamos páginas web, tiendas en línea y aplicaciones móviles de alto impacto,
-            diseñadas para transmitir <strong>confianza</strong> y escalar tu éxito.
+            <strong>Ayudo a negocios y emprendedores</strong> a crecer mediante el  
+            <strong> desarrollo de páginas web tiendas online y aplicaciones móviles. </strong> 
+             Desde sistemas de gestión hasta soluciones de almacenamiento de datos, 
+            <strong> creo tecnología a medida</strong> diseñada para transmitir 
+            <strong> confianza</strong> y escalar tu éxito.
           </p>
 
           <div className="flex flex-wrap gap-5">

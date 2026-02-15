@@ -109,42 +109,46 @@ export default function About() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Entrega en Tiempo y Forma",
+                title: "⏱️ Entrega en Tiempo y Forma",
+                
                 desc: "La puntualidad es mi estándar. Gestiono los tiempos con precisión para asegurar que cada fase del proyecto se entregue según lo acordado, sin comprometer la calidad.",
                 
               },
               {
-                title: "Colaboración Multidisciplinaria",
+                title: "🤝 Colaboración Multidisciplinaria",
+                
                 desc: "Disfruto el trabajo en equipo. Tengo facilidad para comunicarme con diseñadores y áreas de negocio, sumando esfuerzos para alcanzar un objetivo común.",
                 
               },
               {
-                title: "Enfoque Escalable",
+                title: "🚀 Enfoque Escalable",
+                
                 desc: "No solo resuelvo el problema de hoy; diseño pensando en el mañana. Creo software modular y limpio que permite un crecimiento ágil del negocio.",
                 
               },
               {
-                title: "Comprensión del Negocio",
+                title: "📊 Comprensión del Negocio",
                 desc: "Me involucro en los objetivos estratégicos para asegurar que cada solución técnica impulse directamente el retorno de inversión y la eficiencia operativa.",
-                icon: "📊"
+                
               },
               {
-                title: "Aprendizaje Continuo",
+                title: "🧠 Aprendizaje Continuo",
                 desc: "En un mundo tecnológico que cambia a diario, mi mentalidad es de crecimiento constante. Domino nuevas herramientas rápidamente para mantener los proyectos a la vanguardia.",
-                icon: "🧠"
+                
               },
               {
-                title: "Soluciones Centradas en el Usuario",
+                title: "✨ Soluciones Centradas en el Usuario",
                 desc: "Creo herramientas pensadas para personas reales. Mi enfoque garantiza que el software sea intuitivo, accesible y resuelva necesidades humanas específicas.",
-                icon: "✨"
+                
               }
             ].map((item, idx) => (
               <ScrollReveal key={idx} direction="up">
                 <div className="bg-white p-8 rounded-2xl border border-slate-100 hover:border-brand-accent/30 shadow-sm hover:shadow-xl transition-all h-full group">
                   <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {item.icon}
+                    {item.title}
+                    
                   </div>
-                  <h3 className="text-xl font-bold text-brand-dark mb-4">{item.title}</h3>
+                  
                   <p className="text-slate-600 leading-relaxed text-sm md:text-base">{item.desc}</p>
                 </div>
               </ScrollReveal>
