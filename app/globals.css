@@ -15,6 +15,19 @@
   --background: #F8FAFC;
   --foreground: #1E293B;
 }
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Esto evita que elementos con animaciones laterales 
+   creen scroll horizontal antes de aparecer */
+* {
+  touch-action: manipulation;
+}
 
 /* 3. Estilos Globales */
 body {
