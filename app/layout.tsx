@@ -26,7 +26,7 @@ export default function RootLayout({
           {/* flex-grow hace que este div ocupe todo el espacio disponible,
               empujando al footer hacia abajo incluso si hay poco contenido.
           */}
-          <main className="flex-grow">
+          <main className="grow">
             {children}
           </main>
           

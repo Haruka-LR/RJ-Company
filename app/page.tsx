@@ -15,8 +15,8 @@ export default function Home() {
       {/* CAPA DE IMPACTO VISUAL: Blobs de color difuminados 
         Esto crea una atmósfera moderna sin saturar la vista.
       */}
-      <div className="absolute top-[-5%] left-[-10%] w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-[130px] -z-10 animate-pulse" />
-      <div className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] bg-brand-accent/10 rounded-full blur-[110px] -z-10" />
+      <div className="absolute top-[-5%] left-[-10%] w-150 h-150 bg-brand-primary/10 rounded-full blur-[130px] -z-10 animate-pulse" />
+      <div className="absolute bottom-[20%] right-[-10%] w-125 h-125 bg-brand-accent/10 rounded-full blur-[110px] -z-10" />
 
       {/* Sección Hero */}
       <section className="max-w-6xl mx-auto px-6 pt-32 pb-20 md:pt-48 md:pb-32 animate-fadeIn">
@@ -35,7 +35,7 @@ export default function Home() {
               className="group relative bg-brand-accent hover:bg-emerald-600 px-10 py-5 rounded-2xl text-white font-bold text-lg shadow-2xl shadow-emerald-500/30 transition-all hover:-translate-y-1.5 active:scale-95 overflow-hidden"
             >
               {/* Efecto de brillo al pasar el mouse en el botón */}
-              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
+              <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
               <span className="relative">Contáctame</span>
             </a>
             {/*<Link
@@ -51,7 +51,7 @@ export default function Home() {
             {/* Cards De Servicios con diseño tipo Panel Profesional */}
             <FadeIn>
               <div className="max-w-7xl mx-auto px-6 mb-32">
-                <div className="relative p-1 md:p-1.5 bg-gradient-to-b from-slate-200 to-transparent rounded-[2.5rem]">
+                <div className="relative p-1 md:p-1.5 bg-linear-to-b from-slate-200 to-transparent rounded-[2.5rem]">
                   <div className="bg-white rounded-[2.4rem] px-8 py-20 shadow-2xl shadow-slate-200/60">
 
                     <div className="text-center mb-20">

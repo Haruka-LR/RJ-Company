@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* 1. Definición de la Paleta de Confianza (Tailwind v4) */
+/* 1. Definición de la Paleta (Tailwind v4) */
 @theme {
   --color-brand-dark: #1A2B3C;
   --color-brand-primary: #2563EB;
@@ -10,22 +10,44 @@
   --color-slate-600: #475569;
 }
 
-/* 2. Variables CSS Estándar */
+/* 2. Reseteo Crítico para Móviles */
 :root {
   --background: #F8FAFC;
   --foreground: #1E293B;
+  /* Arreglo para el alto en móviles (iOS Safari) */
+  --vh: 1vh;
 }
 
-
-/* 3. Estilos Globales */
-body {
+/* 3. Estilos Globales - ELIMINAMOS EL CONFLICTO DE OVERFLOW */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden; /* Esto es vital */
+  position: relative;
+  margin: 0;
+  padding: 0;
   background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+  /* Evita el rebote elástico en móviles que muestra cuadros blancos */
+  overscroll-behavior-x: none;
 }
 
-/* 4. Utilidades Extra y Animaciones */
+/* 4. Animaciones de Scroll Reveal (Mejoradas) */
+/* Usamos hardware acceleration con translate3d para quitar el lag */
+.reveal-hidden {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
+  visibility: visible !important;
+}
+
+/* 5. Utilidades Extra */
 @utility animate-shimmer {
   animation: shimmer 2s infinite;
 }
@@ -43,47 +65,25 @@ body {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* --- AQUÍ VAN LAS CLASES DE SCROLL REVEAL --- */
-.reveal-visible {
-  opacity: 1 !important;
-  transform: translate(0, 0) !important;
-  visibility: visible !important; /* Añadimos esto por si acaso */
-}
-/* 5. Clases de ayuda y Animación de TechStack */
-@utility bg-brand-dark {
-  background-color: #1A2B3C;
-}
-@utility text-brand-dark {
-  color: #1A2B3C;
-}
+/* 6. TechStack - Marquesina Infinita (Optimizada) */
 @keyframes infinite-scroll {
-  from { 
-    transform: translateX(0); 
-  }
-  to { 
-    /* Si triplicaste la lista, el final exacto es -33.33% */
-    /* Si solo la duplicaste, el final exacto es -50% */
-    transform: translateX(-33.33%); 
-  }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-33.33%, 0, 0); }
 }
 
-@utility animate-infinite-scroll {
-  /* "linear" es vital para que el ritmo no cambie (que no acelere ni frene) */
-  animation: infinite-scroll 40s linear infinite; 
-}
-/* Fuerza a que nada se salga del ancho del teléfono */
-html, body {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  /* Arregla el problema del espacio blanco en iOS Safari */
-  min-height: -webkit-fill-available;
+.animate-infinite-scroll {
+  display: flex;
+  width: max-content;
+  animation: infinite-scroll 40s linear infinite;
 }
 
-/* Evita que el contenedor de Next.js cree scroll extraño */
-#__next, [data-reactroot] {
-  overflow-x: hidden;
+/* Si quieres que se detenga al pasar el mouse, se hace así en CSS estándar: */
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Evita que elementos de Next.js rompan el ancho */
+#__next, main {
   width: 100%;
+  overflow-x: hidden;
 }

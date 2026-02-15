@@ -16,8 +16,8 @@ export default function Home() {
          Esto evita que el "blur" se salga de la pantalla y cree el cuadro blanco.
       */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-        <div className="absolute top-[-2%] left-[-5%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brand-primary/10 rounded-full blur-[80px] md:blur-[130px] animate-pulse" />
-        <div className="absolute bottom-[20%] right-[-5%] w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-brand-accent/10 rounded-full blur-[70px] md:blur-[110px]" />
+        <div className="absolute top-[-2%] left-[-5%] w-75 md:w-150 h-75 md:h-150 bg-brand-primary/10 rounded-full blur-[80px] md:blur-[130px] animate-pulse" />
+        <div className="absolute bottom-[20%] right-[-5%] w-62.5 md:w-125 h-62.5 md:h-125 bg-brand-accent/10 rounded-full blur-[70px] md:blur-[110px]" />
       </div>
 
       {/* Sección Hero */}
@@ -36,7 +36,7 @@ export default function Home() {
               href="/contact"
               className="group relative bg-brand-accent hover:bg-emerald-600 px-10 py-5 rounded-2xl text-white font-bold text-lg shadow-2xl shadow-emerald-500/30 transition-all hover:-translate-y-1.5 active:scale-95 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out" />
+              <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
               <span className="relative">Contáctame</span>
             </Link>
           </div>
@@ -47,7 +47,7 @@ export default function Home() {
       <FadeIn>
         <div className="max-w-7xl mx-auto px-6 mb-32">
           {/* Ajuste de padding en móvil para evitar que la tarjeta se vea comprimida */}
-          <div className="relative p-0.5 md:p-1.5 bg-gradient-to-b from-slate-200 to-transparent rounded-[2.5rem]">
+          <div className="relative p-0.5 md:p-1.5 bg-linear-to-b from-slate-200 to-transparent rounded-[2.5rem]">
             <div className="bg-white rounded-[2.4rem] px-6 py-16 md:px-8 md:py-20 shadow-2xl shadow-slate-200/60">
 
               <div className="text-center mb-20">
